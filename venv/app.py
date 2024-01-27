@@ -171,7 +171,7 @@ def submit():
         <body>
             <h2>Message failed to send ❌</h2>
             <p>Please try again.</p>
-            <p>"Failed to send message."</p>
+            <p>Failed to send message.</p>
         </body>
         </html>'''
          
