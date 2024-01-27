@@ -171,7 +171,7 @@ def submit():
         <body>
             <h2>Message failed to send ❌</h2>
             <p>Please try again.</p>
-            <p>f"Failed to send message. API response status {response.status_code}<br>API response {response.json()}"</p>
+            <p>"Failed to send message. API response status {response.status_code}<br>API response {response.json()}"</p>
         </body>
         </html>'''
          
