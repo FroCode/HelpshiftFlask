@@ -75,7 +75,7 @@ HTML = '''<html lang="en">
     <div class="form-container">
         <form action="/submit" method="post" enctype="multipart/form-data">
             <h1>HelpShift</h1>
-            <h3>Replay to an Issue </h3>
+            <h4>Replay to an Issue </h4>
             <div class="form-group">
                 <label for="issue_id">Issue ID:</label>
                 <input type="text" id="issue_id" name="issue_id" required>
