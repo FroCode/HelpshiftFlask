@@ -145,7 +145,7 @@ def submit():
             </style>
         </head>
         <body>
-            <h2>Message sent successfully!</h2>
+            <h2>Message sent successfully✅h2>
             <p>You will be redirected in 5 seconds...</p>
         </body>
         </html>

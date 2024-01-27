@@ -19,7 +19,7 @@ This project is a Flask web application designed to interact with the Helpshift 
 ### Installation
 
 1. Clone the repository:
-`git clone https://github.com/frocode/helpshiftflask.git`
+- `git clone https://github.com/frocode/helpshiftflask.git`
 
 2. Navigate to the project directory:
 3. Install the required packages
@@ -28,6 +28,6 @@ This project is a Flask web application designed to interact with the Helpshift 
 
 1. Activate the virtual environment
 2. Start the Flask application
-3. Access the application in your browser at `http://localhost:5000`.
+3. Access the application in your browser at `http://127.0.0.1:5000/`.
 
 ## Thanks to Helpshift API to interact with their system.
