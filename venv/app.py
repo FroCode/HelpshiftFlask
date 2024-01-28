@@ -207,6 +207,14 @@ def fetch_issues():
         for issue in issues:
             issue['title'] = issue.get('title', '').title()
             assignee_name = issue.get('assignee_name', '')
+            name_parts = assignee_name.split('.') if assignee_name else ['']
+            issue['name'] = name_parts[0]
+            issue['surname'] = name_parts[1].capitalize() if len(name_parts) > 1 else ''
+            # Formatting date from timestamp
+        updated_at = issue.get('updated_at', 0)
+        issue['date'] = datetime.datetime.fromtimestamp(updated_at / 1000).strftime('%Y-%m-%d %H:%M:%S')
+        issue['status'] = issue.get('status', 'Unknown')
+
             
 
         return render_template('issue-tracker/index.html', issues=issues)
