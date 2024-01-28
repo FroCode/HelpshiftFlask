@@ -1,6 +1,8 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string , render_template
 import requests
 import mimetypes
+import base64
+import datetime
 
 app = Flask(__name__)
 
@@ -90,6 +92,14 @@ HTML = '''<html lang="en">
             </div>
             <button type="submit" class="submit-btn">Submit</button>
         </form>
+        <form action="/fetch-issues" method="post">
+    <h4>Fetch Issues</h4>
+    <div class="form-group">
+        <label for="query">Query (optional):</label>
+        <input type="text" id="query" name="query">
+    </div>
+    <button type="submit" class="submit-btn">Fetch Issues</button>
+</form>
     </div>
 </body>
 </html>
@@ -175,8 +185,34 @@ def submit():
         </body>
         </html>'''
          
-    
-    
+
+
+@app.route('/fetch-issues', methods=['POST'])
+def fetch_issues():
+    DOMAIN = "frocode"  # Replace with your domain
+    api_endpoint = f"https://api.helpshift.com/v1/{DOMAIN}/issues"
+
+    headers = {
+        'Accept': 'application/json',
+        'Authorization': 'Basic ZnJvY29kZV9hcGlfMjAyNDAxMjAyMjMwMzUxMzYtNzcxOGQxYTRiMmE5OWY4'
+    }
+
+    response = requests.get(api_endpoint, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()
+        issues = data.get('issues', [])
+
+        # Preprocess the titles
+        for issue in issues:
+            issue['title'] = issue.get('title', '').title()
+            assignee_name = issue.get('assignee_name', '')
+            
+
+        return render_template('issue-tracker/index.html', issues=issues)
+    else:
+        return f"Error fetching issues: Status Code {response.status_code}, Response: {response.text}", 400
+
 if __name__ == '__main__':
     app.run(debug=True)
 

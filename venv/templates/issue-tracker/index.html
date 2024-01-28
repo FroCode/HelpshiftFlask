@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="../../static/issue-tracker/style.css">
+</head>
+<body>
+    <h1 class="issueTitle">ISSUE TRACKER</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        {% for issue in issues %}
+        <tr>
+            <td>{{ issue.id }}</td>
+            <td>{{ issue.title }}</td>
+            <td>{{ issue.name }}</td>
+            <td>{{ issue.surname }}</td>
+            <td>{{ issue.date }}</td>
+            <td>{{ issue.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* Add this to your external CSS file */
+body {
+    background-color: #333; /* Grey-black background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif; /* Optional: Change the font */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #555; /* Darker shade for table header */
+}
+
+td {
+    background-color: #444; /* Slightly lighter shade for table data */
+}
+.issueTitle {
+    text-align: center;
+}
+/* Responsive design: Makes table scrollable on small screens */
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
