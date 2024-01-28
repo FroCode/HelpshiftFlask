@@ -5,11 +5,13 @@ This project is a Flask web application designed to interact with the Helpshift 
 ![Screenshot](./ScreenShots/Capture%20d'écran%202024-01-27%20192545.png)
 ![Screenshot](./ScreenShots/Capture%20d'écran%202024-01-27%20192646.png)
 ![Screenshot](./ScreenShots/Capture%20d'écran%202024-01-27%20192621.png)
+![Screenshot](./ScreenShots/Capture%20d'écran%202024-01-28%20201200.png)
 ## Features
 
 - Simple HTML form with responsive design.
 - Support for text inputs and file attachments.
 - Integration with the Helpshift API using a Python script.
+- Issue Tracker
 
 ## Getting Started
 
