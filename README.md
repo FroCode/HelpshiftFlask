@@ -33,4 +33,4 @@ This project is a Flask web application designed to interact with the Helpshift 
 2. Start the Flask application
 3. Access the application in your browser at `http://127.0.0.1:5000/`.
 
-## Thanks to Helpshift API to interact with their system.
+
